@@ -1,25 +1,31 @@
-// components/TopMenu.js
-import { Menu } from 'antd';
-import { HomeOutlined, InfoCircleOutlined, AppstoreAddOutlined, ContactsOutlined } from '@ant-design/icons';
-import 'antd/dist/antd.css';
+import React from "react";
+import assets from "@/assets/index";
+import Image from 'next/image';
+import Link from "next/link";
 
-const TopMenu = () => {
-  return (
-    <Menu mode="horizontal" theme="dark">
-      <Menu.Item key="home" icon={<HomeOutlined />}>
-        Home
-      </Menu.Item>
-      <Menu.Item key="about" icon={<InfoCircleOutlined />}>
-        About
-      </Menu.Item>
-      <Menu.Item key="services" icon={<AppstoreAddOutlined />}>
-        Services
-      </Menu.Item>
-      <Menu.Item key="contact" icon={<ContactsOutlined />}>
-        Contact
-      </Menu.Item>
-    </Menu>
-  );
+import styles from "./styles.module.css";
+
+type Props = {
 };
+
+const TopMenu: React.FC<Props> = (props) => {
+  return (
+      <div className={styles.header}>
+        <div className={styles.navbar}>
+          <div className={styles.logo}><a href="#">Logo</a></div>
+        </div>
+        <ul className={styles.links}>
+          <Link href="" className={styles.link}>Home</Link>
+          <Link href="" className={styles.link}>About</Link>
+          <Link href="" className={styles.link}>Services</Link>
+          <Link href="" className={styles.link}>Contact</Link>
+        </ul>
+        <div>
+          <Link href="">Login</Link>
+          <Link href="">Sign Up</Link>
+        </div>
+      </div>
+  );
+}
 
 export default TopMenu;
