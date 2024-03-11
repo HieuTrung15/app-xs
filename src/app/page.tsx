@@ -1,26 +1,14 @@
-import TopMenu from '../components/TopMenu/TopMenu';
-import Chart from '@/components/HighStockChart/HighStockChart';
+"use client"
+import TopMenu from '../components/molecules/TopMenu/TopMenu';
+import React from 'react';
+import GiaiDB from '@/components/pages/GiaiDB';
 
 const Home = () => {
-  const options: Highcharts.Options = {
-    chart: {
-      type: 'bar',
-    },
-    title: {
-      text: 'Biểu đồ mẫu',
-    },
-    series: [
-      {
-        name: 'Dữ liệu mẫu',
-        type: 'bar',
-        data: [1, 2, 3, 4, 5],
-      },
-    ],
-  };
+
   return (
     <div>
       <TopMenu />
-      <Chart options={options} />
+      <GiaiDB/>
     </div>
   );
 };
