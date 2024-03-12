@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import HighchartsLineChart from '../molecules/HighchartsLineChart/HighchartsLineChart';
+import HighchartsLineChart from '../../molecules/HighchartsLineChart/HighchartsLineChart';
 
 interface DayData {
     name: string;
@@ -23,7 +23,7 @@ const GiaiDB = () => {
     const fetchData = async () => {
       const response = await fetch('http://localhost:5000/api/get-gdb');
       const data = await response.json();
-
+      console.log("data", data);
       var result = data.data.map((x:any) => ({y: x.gdb, name: x.date, dayName: x.dayName}))
       setData(result)
     };
@@ -32,10 +32,10 @@ const GiaiDB = () => {
 
   return (
     <>
-      <HighchartsLineChart data={data} handleMouseOver={handleSeriesClick}/>
-      <h3>Value: {hoverData}</h3>
-      <h3>Date: {hoverDate}</h3>
-      <h3>Thứ: {hoverDayName}</h3>
+      <div id="container">
+        <HighchartsLineChart data={data} handleMouseOver={handleSeriesClick}/>
+      </div>
+      <h3>Day of week: {hoverDayName} /Date: {hoverDate}/ Value: {hoverData} </h3>
     </>
   )
 }

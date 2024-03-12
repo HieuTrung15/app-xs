@@ -1,7 +1,7 @@
 "use client"
 import TopMenu from '../components/molecules/TopMenu/TopMenu';
 import React from 'react';
-import GiaiDB from '@/components/pages/GiaiDB';
+import GiaiDB from '@/components/pages/GiaiDB/GiaiDB';
 
 const Home = () => {
 
