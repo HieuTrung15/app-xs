@@ -1,14 +1,14 @@
 "use client"
 import TopMenu from '../components/molecules/TopMenu/TopMenu';
 import React from 'react';
-import GiaiDB from '@/components/pages/GiaiDB/GiaiDB';
+import SpecialPrize from '@/components/pages/SpecialPrize/SpecialPrize';
 
 const Home = () => {
 
   return (
     <div>
       <TopMenu />
-      <GiaiDB/>
+      <SpecialPrize/>
     </div>
   );
 };

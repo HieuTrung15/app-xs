@@ -6,7 +6,7 @@ interface DayData {
     y: number;
 }
 
-const GiaiDB = () => {
+const SpecialPrize = () => {
   const [hoverData, setHoverData] = useState(null);
   const [hoverDate, setHoverDate] = useState(null);
   const [hoverDayName, setHoverDayName] = useState(null);
@@ -40,5 +40,5 @@ const GiaiDB = () => {
   )
 }
 
-export default GiaiDB;
+export default SpecialPrize;
 
