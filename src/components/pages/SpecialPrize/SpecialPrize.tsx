@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import HighchartsLineChart from '../../molecules/HighchartsLineChart/HighchartsLineChart';
-
+import TopMenu from '@/components/molecules/TopMenu/TopMenu';
 interface DayData {
     name: string;
     y: number;
@@ -32,6 +32,7 @@ const SpecialPrize = () => {
 
   return (
     <>
+      <TopMenu/>
       <div id="container">
         <HighchartsLineChart data={data} handleMouseOver={handleSeriesClick}/>
       </div>
