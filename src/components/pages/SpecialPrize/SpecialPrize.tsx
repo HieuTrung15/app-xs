@@ -21,7 +21,7 @@ const SpecialPrize = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('http://localhost:5000/api/get-gdb');
+      const response = await fetch('http://127.0.0.1:8000/api/gdb');
       const data = await response.json();
       console.log("data", data);
       var result = data.data.map((x:any) => ({y: x.gdb, name: x.date, dayName: x.dayName}))
