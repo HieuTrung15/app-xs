@@ -1,11 +1,17 @@
-import TopMenu from '../components/TopMenu';
+"use client"
+// import TopMenu from '../components/molecules/TopMenu/TopMenu';
+import React from 'react';
+import SpecialPrize from '@/components/pages/SpecialPrize/SpecialPrize';
+import Home from '@/components/pages/Home/Home';
 
-const Home = () => {
+const Main = () => {
   return (
     <div>
-      <TopMenu />
+      {/* <TopMenu /> */}
+      <SpecialPrize/>
+      {/* <Home/> */}
     </div>
   );
 };
 
-export default Home;
+export default Main;
